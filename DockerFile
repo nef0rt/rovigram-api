@@ -1,0 +1,18 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Копируем package.json и package-lock.json
+COPY package*.json ./
+
+# Устанавливаем зависимости
+RUN npm ci --only=production
+
+# Копируем весь код
+COPY . .
+
+# Открываем порт
+EXPOSE 8080
+
+# Запускаем
+CMD ["node", "server.js"]
