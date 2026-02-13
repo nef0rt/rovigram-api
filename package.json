@@ -1,8 +1,6 @@
 {
   "name": "rovigram-api",
   "version": "1.0.0",
-  "description": "RoviGram Cloud API",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
